@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Computing Project - AWS EC2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 800px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .emoji {
+            font-size: 1.2em;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        p {
+            font-size: 1.4em;
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border-left: 5px solid #ffd700;
+        }
+
+        .info-box p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.3);
+            padding: 8px 20px;
+            border-radius: 25px;
+            margin: 10px 5px;
+            font-size: 1em;
+            border: 2px solid #ffd700;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 1em;
+            opacity: 0.8;
+        }
+
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            p {
+                font-size: 1.2em;
+            }
+            .container {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><span class="emoji">🚀</span> Cloud Computing Project</h1>
+        
+        <p>Successfully Hosted on <span class="highlight">AWS EC2</span></p>
+        
+        <div class="info-box">
+            <p><strong>Student Name:</strong> <span class="highlight">YOUR NAME HERE</span></p>
+            <p><strong>Roll Number:</strong> <span class="highlight">YOUR ROLL NUMBER</span></p>
+            <p><strong>Course:</strong> Cloud Computing Lab</p>
+            <p><strong>Project:</strong> EC2 Web Server Hosting</p>
+        </div>
+
+        <p style="font-size: 1.6em; margin: 30px 0;">
+            <span class="emoji">✅</span> Server Status: <span class="highlight">Online</span>
+        </p>
+
+        <div class="tech-stack">
+            <div class="badge">🖥️ AWS EC2</div>
+            <div class="badge">🐧 Amazon Linux 2</div>
+            <div class="badge">🌐 Apache HTTP Server</div>
+            <div class="badge">📄 HTML5</div>
+        </div>
+
+        <div class="footer">
+            <p>Powered by Amazon Web Services</p>
+            <p>Instance Type: t2.micro | Region: us-east-1</p>
+        </div>
+    </div>
+
+    <script>
+        // Add current date and time
+        const footer = document.querySelector('.footer');
+        const dateTime = document.createElement('p');
+        dateTime.textContent = 'Deployed on: ' + new Date().toLocaleString();
+        dateTime.style.marginTop = '10px';
+        footer.appendChild(dateTime);
+
+        // Simple animation on load
+        window.addEventListener('load', () => {
+            document.querySelector('.container').style.animation = 'fadeIn 1s ease-in';
+        });
+    </script>
+</body>
+</html>
